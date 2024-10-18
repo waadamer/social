@@ -86,7 +86,7 @@ const addNewPost = () => {
     newPost.author = {};
     newPost.author.displayName = "Waad Amer";
     newPost.author.subtitle = "Just a web developer";
-    newPost.author.avatar = './imgs/woman.png';
+    newPost.author.avatar = 'imgs/woman.png';
 
     DATA.unshift(newPost);
     renderAllPosts();
