@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="./assets/MOCK-DATA.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="header">
+            <img src="imgs/logo.png" alt="logo" height="30">
+            <ul class="actions">
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li onclick="toggleModal()"><i class="fa-regular fa-square-plus"></i></li>
+                <li><i class="fa-regular fa-paper-plane"></i></li>
+            </ul>
+        </nav>
+        <div id="addModal" class="">
+            <div class="backdrop"></div>
+            <div class="modal-content">
+                <span onclick="toggleModal()" class="close-button"><i class="fa-regular fa-solid fa-x"></i></span>
+                <h3>Add New Post</h3>
+                <form>
+                    <div>
+                        <label for="img-input">Post Image</label><br>
+                        <input id="img-input" type="text" name="image" />
+                    </div>
+                    <br>
+                    <div>
+                        <label for="desc-input">Post Description</label><br>
+                        <textarea id="desc-input" name="desc" rows="10"></textarea>
+                    </div>
+                    <button type="button" onclick="addNewPost()">Submit</button>
+                    <input type="reset" value="Clear" />
+                </form>
+            </div>
+        </div>
+        <main id="post-list" class="list">
+
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
